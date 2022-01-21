@@ -111,9 +111,9 @@
 
 	    /*
 	    	Utiliser un fournisseur de données qui renvoie un objet Iterator
-	    */
+	    */		
 		/**
-	     * //@dataProvider additionProvider1
+	     * @dataProvider additionProvider1
 	    */
 	    public function testAdd1($a, $b, $expected): void
 	    {

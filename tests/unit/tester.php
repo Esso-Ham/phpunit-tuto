@@ -1,45 +1,29 @@
-<?php
+<?php	
+	namespace foo;
 	
-	$result = function (int $index){
+	class bar {
+		}
+	
+		echo bar::class. "</br>"; // foo\bar
 
-        $tab = [0, 1];
-        $nb = 0;
 
-        for ($i=0; $i <= $index; $i++) {
+	class MyClass
+	{
+	  const CONSTANT = 'valeur constante';
+	
+	  function showConstant() {
+		echo  self::CONSTANT . "</br>";
+	  }
+	}
+	
+	echo \foo\MyClass::CONSTANT. "</br>";
+	
+	$classname = "MyClass";
+	//echo \foo\$classname::CONSTANT . "</br>";
+	
+	$class = new \foo\MyClass();
+	$class->showConstant();
+	
+	echo $class::CONSTANT. "</br>";
 
-            if($i < 2){
-
-                if ($i === 0) {
-                    $nb = 0;
-					//var_dump('0', $tab);
-					//echo '</br>';
-                }else{
-                    $nb = 1;
-					var_dump('1', $tab);
-					echo '</br>';
-                }                
-            }else{
-
-				$nb = $tab[0] + $tab[1];
-				var_dump('a', $tab);
-				echo '</br>';
-
-            	array_push($tab, $nb);
-				var_dump('b', $tab);
-				echo '</br>';
-
-            	array_shift($tab);
-				var_dump('c', $tab);
-				echo '</br>';
-			}                        
-    	}
-		
-		return $nb;
-	};
-
-	$a = $result(2);
-
-	//var_dump($a);
-
-    
 ?>
